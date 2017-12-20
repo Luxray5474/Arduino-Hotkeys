@@ -12,4 +12,4 @@ As a result of that, you **must** first install HoodLoader2 onto your board. You
 
 Next, install the HID-Project library and board defenitions. You can find out how [here.](https://github.com/NicoHood/HID/wiki)
 
-**NOTE: When uploading the sketches to your board, please upload 'Arduino-Hotkeys-IO' to the *IO MCU, a.k.a. the 328/328p*, and 'Arduino-Hotkeys-USB' to the *USB MCU, a.k.a. the 16u2*. It will not work if you do not uplaod it correctly!**
+**NOTE: When uploading the sketches to your board, please upload 'Arduino-Hotkeys-IO' to the *IO MCU, a.k.a. the 328/328p*, and 'Arduino-Hotkeys-USB' to the *USB MCU, a.k.a. the 16u2*. It will not work if you do not upload it correctly!**
