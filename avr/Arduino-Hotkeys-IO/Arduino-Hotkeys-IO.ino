@@ -24,39 +24,28 @@ void setup() {
 void loop() {
   int RRstate = digitalRead(rewindPin);
   int PPstate = digitalRead(pausePlayPin);
-  int pauseState = 0;
   int FFstate = digitalRead(fastForwardPin);
-
-  if(pauseState == 1) {
-    digitalWrite(pauseLedPin, HIGH);
-  } else {
-    digitalWrite(pauseLedPin, LOW);
-  }
 
   if(RRstate == LOW){
     digitalWrite(ledPin, HIGH);
     digitalWrite(rewindLedPin, HIGH);
-    Serial.println("mac9");
+    Serial.println("1");
     delay(200);
     digitalWrite(ledPin, LOW);
     digitalWrite(rewindLedPin, LOW);
   }
   
-  if(PPstate == LOW){
-    if(pauseState == 1) {
-      pauseState = 0;
-    } else {
-      pause
-    }
-    digitalWrite(ledPin, HIGH);
-    Serial.println("mac10");
+  if(PPstate == LOW) {
+    if(digitalRead(pauseLedPin) == HIGH) digitalWrite(playLedPin, HIGH);
+    digitalWrite(pauseLedPin, !digitalRead(pauseLedPin));
+    Serial.println("2");
     delay(200);
-    digitalWrite(ledPin, LOW);
+    if(digitalRead(playLedPin) == HIGH) digitalWrite(playLedPin, LOW);
   }
   if(FFstate == LOW){
     digitalWrite(ledPin, HIGH);
     digitalWrite(forwardLedPin, HIGH);
-    Serial.println("mac11");
+    Serial.println("3");
     delay(200);
     digitalWrite(ledPin, LOW);
     digitalWrite(forwardLedPin, LOW);
