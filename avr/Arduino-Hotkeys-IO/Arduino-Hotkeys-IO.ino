@@ -29,7 +29,7 @@ void loop() {
   if(RRstate == LOW){
     digitalWrite(ledPin, HIGH);
     digitalWrite(rewindLedPin, HIGH);
-    Serial.println("1");
+    Serial.println("prev");
     delay(200);
     digitalWrite(ledPin, LOW);
     digitalWrite(rewindLedPin, LOW);
